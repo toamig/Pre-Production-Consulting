@@ -11,11 +11,11 @@ export default function Contact() {
           If you're about to start a project, I can help you avoid early technical debt.
         </p>
         <a
-          href="mailto:miguel@example.com"
+          href="mailto:support@migueltechlead.pt"
           className="inline-flex items-center gap-3 px-8 py-4 bg-gray-900 text-white rounded-lg font-medium hover:bg-gray-800 transition-colors text-lg"
         >
           <Mail size={20} />
-          miguel@example.com
+          support@migueltechlead.pt
         </a>
       </div>
     </section>
