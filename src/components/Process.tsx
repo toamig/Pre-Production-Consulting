@@ -50,7 +50,7 @@ export default function Process() {
                   <div className="bg-white border border-gray-200 rounded-lg p-6">
                     <div className="flex items-center gap-3 mb-3 md:justify-end">
                       <span className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
-                        Week {index + 1}
+                        Phase {index + 1}
                       </span>
                       <span className="text-sm text-gray-400">•</span>
                       <span className="text-sm text-gray-600">{step.duration}</span>
