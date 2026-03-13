@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <p className="text-gray-600 text-sm">
-            © {currentYear} Miguel. All rights reserved.
+            © {currentYear} Miguel Vieira. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <a

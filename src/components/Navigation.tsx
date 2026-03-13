@@ -38,7 +38,7 @@ export default function Navigation() {
             onClick={(e) => handleClick(e, '#hero')}
             className="font-semibold text-gray-900 text-lg"
           >
-            Miguel
+            Miguel Vieira
           </a>
 
           <div className="hidden md:flex items-center gap-8">
