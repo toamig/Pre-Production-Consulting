@@ -4,6 +4,7 @@ import Services from './components/Services';
 import Deliverables from './components/Deliverables';
 import WhoItsFor from './components/WhoItsFor';
 import Process from './components/Process';
+import Pricing from './components/Pricing';
 import Work from './components/Work';
 import About from './components/About';
 import Contact from './components/Contact';
@@ -15,11 +16,12 @@ function App() {
       <Navigation />
       <main>
         <Hero />
-        <Services />
-        <Deliverables />
         <WhoItsFor />
-        <Process />
+        <Services />
         <Work />
+        <Process />
+        <Deliverables />
+        <Pricing />
         <About />
         <Contact />
       </main>

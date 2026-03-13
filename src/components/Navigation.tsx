@@ -6,9 +6,9 @@ export default function Navigation() {
 
   const navLinks = [
     { href: '#services', label: 'Services' },
-    { href: '#deliverables', label: 'Deliverables' },
-    { href: '#process', label: 'Process' },
     { href: '#work', label: 'Work' },
+    { href: '#process', label: 'Process' },
+    { href: '#pricing', label: 'Pricing' },
     { href: '#about', label: 'About' },
     { href: '#contact', label: 'Contact' },
   ];

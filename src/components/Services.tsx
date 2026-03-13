@@ -1,34 +1,40 @@
-import { Box, GitBranch, FileCode } from 'lucide-react';
+import { Network, GitBranch, Wrench, ShieldCheck } from 'lucide-react';
 
 export default function Services() {
   const services = [
     {
-      icon: Box,
-      title: 'Architecture & system boundaries',
+      icon: Network,
+      title: 'Multiplayer Architecture',
       description:
-        'Define clear contracts between gameplay systems, avoiding tight coupling that breaks at scale.',
+        'Design replication strategies, authority models, and dedicated server topology for networked titles — before a single line of feature code is written. Built on real experience shipping multiplayer across UE4 and UE5.',
+    },
+    {
+      icon: ShieldCheck,
+      title: 'Systems Design & Object-Oriented Architecture',
+      description:
+        'Define clear contracts between gameplay systems, establish C++/Blueprint boundaries, and structure your codebase to scale with the feature list — not against it.',
     },
     {
       icon: GitBranch,
-      title: 'Pipelines & multiplayer-ready rules',
+      title: 'Development Standards & Pipelines',
       description:
-        'Design data flows and authority patterns that work for networked gameplay from day one.',
+        'Establish naming conventions, ownership rules, and cross-discipline handoff protocols that keep art and tech teams aligned throughout production.',
     },
     {
-      icon: FileCode,
-      title: 'Reference implementations & handoff docs',
+      icon: Wrench,
+      title: 'Technical Risk & Audit',
       description:
-        'Deliver working C++ foundations with Blueprint extension points and documentation your team can build on.',
+        'Identify the architectural gaps, wrong priorities, and hidden debt in your current direction — early enough to fix them without derailing production.',
     },
   ];
 
   return (
-    <section id="services" className="py-20 bg-gray-50">
+    <section id="services" className="py-20">
       <div className="max-w-6xl mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
           What I do
         </h2>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-6">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (

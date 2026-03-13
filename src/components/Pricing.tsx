@@ -50,7 +50,7 @@ const addons = [
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="py-20 bg-gray-50">
+    <section id="pricing" className="py-20">
       <div className="max-w-5xl mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
           Pricing
