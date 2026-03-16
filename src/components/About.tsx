@@ -1,10 +1,15 @@
+import FadeIn from './FadeIn';
+
 export default function About() {
   return (
     <section id="about" className="py-20 bg-gray-50">
       <div className="max-w-3xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
-          About
-        </h2>
+        <FadeIn>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
+            About
+          </h2>
+        </FadeIn>
+        <FadeIn delay={100}>
         <div className="space-y-5 text-lg text-gray-700 leading-relaxed">
           <p>
             I specialise in multiplayer architecture and object-oriented systems design for Unreal Engine — the kind of foundational work that determines whether a project scales gracefully or collapses under its own weight mid-production.
@@ -19,6 +24,7 @@ export default function About() {
             <strong>Solid foundations are not a luxury or a nice-to-have. They are the most cost-effective decision a team can make.</strong> I'm here to help you make that decision before it's too late.
           </p>
         </div>
+        </FadeIn>
       </div>
     </section>
   );

@@ -1,4 +1,5 @@
 import { Check, X } from 'lucide-react';
+import FadeIn from './FadeIn';
 
 export default function WhoItsFor() {
   const goodFit = [
@@ -16,45 +17,51 @@ export default function WhoItsFor() {
   ];
 
   return (
-    <section id="fit" className="py-20 bg-gray-50">
+    <section id="fit" className="py-10 md:py-12 bg-gray-50">
       <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
-          Is this a fit?
-        </h2>
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="bg-white border border-gray-200 rounded-lg p-8">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
-                <Check size={20} className="text-green-700" />
+        <FadeIn>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
+            Is this a fit?
+          </h2>
+        </FadeIn>
+        <div className="grid md:grid-cols-2 gap-6">
+          <FadeIn delay={80}>
+            <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-9 h-9 bg-green-100 rounded-lg flex items-center justify-center">
+                  <Check size={18} className="text-green-700" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900">Good fit</h3>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900">Good fit</h3>
+              <ul className="space-y-3">
+                {goodFit.map((item, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <Check size={18} className="text-green-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700">{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <ul className="space-y-3">
-              {goodFit.map((item, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <Check size={18} className="text-green-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+          </FadeIn>
 
-          <div className="bg-white border border-gray-200 rounded-lg p-8">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center">
-                <X size={20} className="text-gray-600" />
+          <FadeIn delay={180}>
+            <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-9 h-9 bg-gray-100 rounded-lg flex items-center justify-center">
+                  <X size={18} className="text-gray-600" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900">Not a fit</h3>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900">Not a fit</h3>
+              <ul className="space-y-3">
+                {notAFit.map((item, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <X size={18} className="text-gray-400 flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-600">{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <ul className="space-y-3">
-              {notAFit.map((item, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <X size={18} className="text-gray-400 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-600">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+          </FadeIn>
         </div>
       </div>
     </section>

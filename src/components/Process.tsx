@@ -1,3 +1,5 @@
+import FadeIn from './FadeIn';
+
 const phases = [
   {
     label: 'Phase 0',
@@ -53,26 +55,28 @@ export default function Process() {
   return (
     <section id="process" className="py-20">
       <div className="max-w-5xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
-          Process
-        </h2>
-        <p className="text-gray-600 text-center mb-16 max-w-2xl mx-auto">
-          A full engagement typically spans 1 to 3 months depending on project scope and team size.
-        </p>
+        <FadeIn>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
+            Process
+          </h2>
+          <p className="text-gray-600 text-center mb-16 max-w-2xl mx-auto">
+            A full engagement typically spans 1 to 3 months depending on project scope and team size.
+          </p>
+        </FadeIn>
 
         <div className="relative">
           <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gray-200 -translate-x-1/2 hidden md:block" />
 
           <div className="space-y-12">
             {phases.map((phase, index) => (
+              <FadeIn key={index} delay={60}>
               <div
-                key={index}
                 className={`relative flex flex-col md:flex-row gap-8 ${
                   index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
                 }`}
               >
                 <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:text-right md:pr-12' : 'md:pl-12'}`}>
-                  <div className="bg-white border border-gray-200 rounded-lg p-6">
+                  <div className="bg-white border border-gray-200 rounded-lg p-6 hover:border-gray-300 hover:shadow-sm transition-all duration-200">
                     <div className={`flex items-center gap-3 mb-3 ${index % 2 === 0 ? 'md:justify-end' : ''}`}>
                       <span className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
                         {phase.label}
@@ -109,6 +113,7 @@ export default function Process() {
 
                 <div className="md:w-1/2" />
               </div>
+              </FadeIn>
             ))}
           </div>
         </div>

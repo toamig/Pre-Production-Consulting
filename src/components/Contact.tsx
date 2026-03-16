@@ -1,15 +1,21 @@
 import { Calendar, Mail } from 'lucide-react';
+import FadeIn from './FadeIn';
 
 export default function Contact() {
   return (
     <section id="contact" className="py-20">
       <div className="max-w-3xl mx-auto px-6 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-          Get in touch
-        </h2>
-        <p className="text-xl text-gray-700 leading-relaxed mb-10">
-          If you're about to start a project, I can help you avoid early technical debt.
-        </p>
+        <FadeIn>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            Get in touch
+          </h2>
+        </FadeIn>
+        <FadeIn delay={100}>
+          <p className="text-xl text-gray-700 leading-relaxed mb-10">
+            If you're about to start a project, I can help you avoid early technical debt.
+          </p>
+        </FadeIn>
+        <FadeIn delay={200}>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
             href="https://calendly.com/migueltechlead-support/30min"
@@ -28,6 +34,7 @@ export default function Contact() {
             support@migueltechlead.pt
           </a>
         </div>
+        </FadeIn>
       </div>
     </section>
   );

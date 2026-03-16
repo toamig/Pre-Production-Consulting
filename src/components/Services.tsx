@@ -1,4 +1,5 @@
 import { Network, GitBranch, Wrench, ShieldCheck } from 'lucide-react';
+import FadeIn from './FadeIn';
 
 export default function Services() {
   const services = [
@@ -31,16 +32,18 @@ export default function Services() {
   return (
     <section id="services" className="py-20">
       <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
-          What I do
-        </h2>
+        <FadeIn>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+            What I do
+          </h2>
+        </FadeIn>
         <div className="grid md:grid-cols-2 gap-6">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
+              <FadeIn key={index} delay={index * 80}>
               <div
-                key={index}
-                className="bg-white p-8 rounded-lg border border-gray-200 hover:border-gray-300 transition-colors"
+                className="bg-white p-8 rounded-lg border border-gray-200 hover:border-gray-300 hover:shadow-sm transition-all duration-200"
               >
                 <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
                   <Icon size={24} className="text-gray-700" />
@@ -52,6 +55,7 @@ export default function Services() {
                   {service.description}
                 </p>
               </div>
+              </FadeIn>
             );
           })}
         </div>

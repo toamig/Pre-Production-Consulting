@@ -1,3 +1,5 @@
+import FadeIn from './FadeIn';
+
 const tiers = [
   {
     label: 'Micro Team',
@@ -52,36 +54,48 @@ export default function Pricing() {
   return (
     <section id="pricing" className="py-20">
       <div className="max-w-5xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
-          Pricing
-        </h2>
-        <p className="text-gray-600 text-center mb-16 max-w-2xl mx-auto">
-          Each phase is invoiced separately — you only commit one step at a time.
-        </p>
+        <FadeIn>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
+            Pricing
+          </h2>
+          <p className="text-gray-600 text-center mb-16 max-w-2xl mx-auto">
+            Each phase is invoiced separately — you only commit one step at a time.
+          </p>
+        </FadeIn>
 
-        <h3 className="text-xl font-semibold text-gray-900 mb-6">Pricing ranges</h3>
+        <FadeIn delay={60}>
+          <h3 className="text-xl font-semibold text-gray-900 mb-6">Pricing ranges</h3>
+        </FadeIn>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
-          {tiers.map((tier) => (
-            <div key={tier.label} className="bg-white border border-gray-200 rounded-lg p-6 flex flex-col">
-              <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">{tier.label}</p>
-              <p className="text-sm text-gray-600 leading-relaxed">{tier.description}</p>
-            </div>
+          {tiers.map((tier, index) => (
+            <FadeIn key={tier.label} delay={80 + index * 70}>
+              <div className="bg-white border border-gray-200 rounded-lg p-6 flex flex-col hover:border-gray-300 hover:shadow-sm transition-all duration-200">
+                <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">{tier.label}</p>
+                <p className="text-sm text-gray-600 leading-relaxed">{tier.description}</p>
+              </div>
+            </FadeIn>
           ))}
         </div>
 
-        <h3 className="text-xl font-semibold text-gray-900 mb-6">Add-ons</h3>
+        <FadeIn>
+          <h3 className="text-xl font-semibold text-gray-900 mb-6">Add-ons</h3>
+        </FadeIn>
         <div className="space-y-3">
-          {addons.map((addon) => (
-            <div key={addon.name} className="bg-white border border-gray-200 rounded-lg px-6 py-4">
-              <p className="font-medium text-gray-900">{addon.name}</p>
-              <p className="text-sm text-gray-500 mt-0.5">{addon.description}</p>
-            </div>
+          {addons.map((addon, index) => (
+            <FadeIn key={addon.name} delay={index * 50}>
+              <div className="bg-white border border-gray-200 rounded-lg px-6 py-4 hover:border-gray-300 hover:shadow-sm transition-all duration-200">
+                <p className="font-medium text-gray-900">{addon.name}</p>
+                <p className="text-sm text-gray-500 mt-0.5">{addon.description}</p>
+              </div>
+            </FadeIn>
           ))}
         </div>
 
-        <p className="text-sm text-gray-400 text-center mt-10">
-          Final pricing is confirmed after the Phase 0 exploratory call.
-        </p>
+        <FadeIn delay={100}>
+          <p className="text-sm text-gray-400 text-center mt-10">
+            Final pricing is confirmed after the Phase 0 exploratory call.
+          </p>
+        </FadeIn>
       </div>
     </section>
   );
