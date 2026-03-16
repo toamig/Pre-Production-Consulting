@@ -17,8 +17,8 @@ export default function WhoItsFor() {
   ];
 
   return (
-    <section id="fit" className="py-14 md:py-16 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="fit" className="min-h-[calc(50vh-32px)] flex items-center bg-gray-50">
+      <div className="max-w-6xl mx-auto px-6 w-full py-10">
         <FadeIn>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-10 text-center">
             Is this a fit?

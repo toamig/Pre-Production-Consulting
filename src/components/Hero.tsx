@@ -17,8 +17,8 @@ export default function Hero() {
   };
 
   return (
-    <section id="hero" className="pt-24 pb-12 md:pt-32 md:pb-14">
-      <div className="max-w-4xl mx-auto px-6 text-center">
+    <section id="hero" className="min-h-[calc(50vh-32px)] flex items-center">
+      <div className="max-w-4xl mx-auto px-6 text-center w-full py-10">
         <FadeIn>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
             Start your UE5 project with architecture that scales.
