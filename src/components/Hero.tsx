@@ -17,7 +17,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="hero" className="min-h-[calc(50vh-32px)] flex items-center">
+    <section id="hero" className="mt-16 min-h-[calc(50vh-32px)] flex items-center">
       <div className="max-w-4xl mx-auto px-6 text-center w-full py-10">
         <FadeIn>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
