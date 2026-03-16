@@ -17,7 +17,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="hero" className="pt-20 pb-8 md:pt-24 md:pb-10">
+    <section id="hero" className="pt-24 pb-12 md:pt-32 md:pb-14">
       <div className="max-w-4xl mx-auto px-6 text-center">
         <FadeIn>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">

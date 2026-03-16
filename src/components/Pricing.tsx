@@ -68,8 +68,8 @@ export default function Pricing() {
         </FadeIn>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
           {tiers.map((tier, index) => (
-            <FadeIn key={tier.label} delay={80 + index * 70}>
-              <div className="bg-white border border-gray-200 rounded-lg p-6 flex flex-col hover:border-gray-300 hover:shadow-sm transition-all duration-200">
+            <FadeIn key={tier.label} delay={80 + index * 70} className="h-full">
+              <div className="bg-white border border-gray-200 rounded-lg p-6 flex flex-col h-full hover:border-gray-300 hover:shadow-sm transition-all duration-200">
                 <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">{tier.label}</p>
                 <p className="text-sm text-gray-600 leading-relaxed">{tier.description}</p>
               </div>

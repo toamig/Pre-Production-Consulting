@@ -17,16 +17,16 @@ export default function WhoItsFor() {
   ];
 
   return (
-    <section id="fit" className="py-10 md:py-12 bg-gray-50">
+    <section id="fit" className="py-14 md:py-16 bg-gray-50">
       <div className="max-w-6xl mx-auto px-6">
         <FadeIn>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-10 text-center">
             Is this a fit?
           </h2>
         </FadeIn>
         <div className="grid md:grid-cols-2 gap-6">
-          <FadeIn delay={80}>
-            <div className="bg-white border border-gray-200 rounded-lg p-6">
+          <FadeIn delay={80} className="h-full">
+            <div className="bg-white border border-gray-200 rounded-lg p-6 h-full">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-9 h-9 bg-green-100 rounded-lg flex items-center justify-center">
                   <Check size={18} className="text-green-700" />
@@ -44,8 +44,8 @@ export default function WhoItsFor() {
             </div>
           </FadeIn>
 
-          <FadeIn delay={180}>
-            <div className="bg-white border border-gray-200 rounded-lg p-6">
+          <FadeIn delay={180} className="h-full">
+            <div className="bg-white border border-gray-200 rounded-lg p-6 h-full">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-9 h-9 bg-gray-100 rounded-lg flex items-center justify-center">
                   <X size={18} className="text-gray-600" />

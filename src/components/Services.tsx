@@ -41,9 +41,9 @@ export default function Services() {
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <FadeIn key={index} delay={index * 80}>
+              <FadeIn key={index} delay={index * 80} className="h-full">
               <div
-                className="bg-white p-8 rounded-lg border border-gray-200 hover:border-gray-300 hover:shadow-sm transition-all duration-200"
+                className="bg-white p-8 rounded-lg border border-gray-200 hover:border-gray-300 hover:shadow-sm transition-all duration-200 h-full"
               >
                 <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
                   <Icon size={24} className="text-gray-700" />
